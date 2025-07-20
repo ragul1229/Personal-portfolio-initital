@@ -230,3 +230,52 @@ a {
     opacity: 0.05;
   }
 }
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .home {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .home-info {
+    width: 100%;
+  }
+
+  .home-img {
+    margin-top: 30px;
+  }
+
+  .img-box img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .btn-sci {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
