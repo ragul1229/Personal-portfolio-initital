@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #1f2421;
+  color: white;
+}
+
+/* Navbar */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #1f2421;
+
+  /* Updated animation timing for faster appearance */
+  opacity: 0;
+  visibility: hidden;
+  animation: show-content 0.5s ease-in forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes show-content {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-left: 35px;
+}
+
+.navbar ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+  color: #7cf03d;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 60px 9% 0;
+  gap: 60px;
+  position: relative;
+}
+
+/* Info Section */
+.home-info h1 {
+  font-size: 55px;
+}
+
+.home-info h2 {
+  font-size: 32px;
+  margin-top: -10px;
+}
+
+.home-info p {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.btn-sci {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+/* Download CV Button */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #7cf03d;
+  border: 2px solid #7cf03d;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  font-size: 16px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #7cf03d;
+}
+
+/* Social Icons */
+.sci {
+  display: flex;
+  gap: 15px;
+}
+
+.sci a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7cf03d;
+  border-radius: 50%;
+  color: #7cf03d;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.sci a:hover {
+  background: #7cf03d;
+  color: #1f2421;
+  box-shadow: 0 0 10px #7cf03d;
+}
+
+/* Profile Image with Glow */
+.home-img {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #7cf03d;
+  opacity: 0.2;
+  filter: blur(30px);
+  z-index: 0;
+}
+
+/* Image box */
+.img-box {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #7cf03d;
+  z-index: 2;
+}
+
+/* Profile Image */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #1f2421;
+  border-radius: 50%;
+}
+
+/* === Animated Bars Behind Image === */
+.bars {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bar {
+  width: 10px;
+  height: 100%;
+  background: #7cf03d;
+  opacity: 0.05;
+  animation: glow 1.2s linear infinite;
+}
+
+.bar:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+.bar:nth-child(even) {
+  animation-delay: 0.6s;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
