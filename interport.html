@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects - Ragul J</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar .logo {
+      color: #00ffee;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #00ffee;
+    }
+
+    /* Projects Section */
+    .portfolio-section {
+      padding: 100px 20px 60px; /* Added top padding for spacing below navbar */
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .portfolio-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00ffee;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .project-card p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      color: #00ffee;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .portfolio-section {
+        padding-top: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Who Am I?</a></li>
+      <li><a href="interport.html" class="active">Portfolio</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="portfolio-section">
+    <h2>My Projects</h2>
+    <p>Here are a few projects I've worked on recently. Hover to see details.</p>
+
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>🏫 PlayBuddy</h3>
+        <p>Aweb platform that helps local sports teams discover nearby opponents and schedule friendly matches effortlessly.</p>
+        <a href="https://github.com/ragul1229" target="_blank">View on GitHub</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>🧠 AI Voice Assistant (Jarvis)</h3>
+        <p>Python-based JARVIS-style voice assistant with voice commands to automate searches, launch apps, tell time/weather, and more.</p>
+        <a href="https://github.com/ragul1229" target="_blank">View on GitHub</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>🏫 Smart Outpass System</h3>
+        <p>Machine Learning powered smart outpass system with camera feeds to detect student movement and notify wardens and staff.</p>
+        <a href="https://github.com/ragul1229" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>🎥 YouTube Frontend Clone</h3>
+        <p>A responsive replica of YouTube's frontend using HTML, CSS, and JavaScript. Focused on layout, responsiveness, and UI fidelity.</p>
+        <a href="https://github.com/ragul1229" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Ragul J</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #111;
+    }
+
+    .navbar .logo {
+      color: #00ffee;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #00ffee;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(30, 30, 30, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffee;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      margin-bottom: 20px;
+      padding: 12px;
+      background: #1f1f1f;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00ffee;
+      box-shadow: 0 0 10px #00ffee66;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      background: #00ffee;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00c8c8;
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00ffee;
+      color: #000;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: none;
+      box-shadow: 0 0 10px #00ffee;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Updated Navbar -->
+<nav class="navbar">
+  <a class="logo">Portfolio.</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Who Am I?</a></li>
+    <li><a href="interport.html">Portfolio</a></li>
+    <li><a href="service.html">Service</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Contact Form -->
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast">Message sent successfully!</div>
+
+  <!-- JS -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = form.getAttribute("action");
+
+      fetch(action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          toast.style.display = "block";
+          setTimeout(() => toast.style.display = "none", 3000);
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
