@@ -19,7 +19,7 @@
     }
 
     .navbar .logo {
-      color: #00ffee;
+      color: #7cf03d;
       font-size: 24px;
       font-weight: bold;
     }
@@ -38,7 +38,7 @@
 
     .navbar ul li a:hover,
     .navbar ul li a.active {
-      color: #00ffee;
+      color: #7cf03d;
     }
 
     .contact-container {
@@ -55,7 +55,7 @@
     .contact-container h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #00ffee;
+      color: #7cf03d;
     }
 
     form {
@@ -86,7 +86,7 @@
 
     button {
       padding: 12px;
-      background: #00ffee;
+      color: #7cf03d;
       color: #000;
       border: none;
       border-radius: 8px;
@@ -96,7 +96,7 @@
     }
 
     button:hover {
-      background: #00c8c8;
+      color: #7cf03d;
     }
 
     #toast {

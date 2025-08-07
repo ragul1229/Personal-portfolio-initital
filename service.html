@@ -48,7 +48,7 @@
 
     .navbar ul li a:hover,
     .navbar ul li a.active {
-      color: #00ffee;
+      color: #7cf03d;
     }
 
     .services-section {
@@ -100,10 +100,10 @@
       color: #bbb;
     }
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(0, 255, 247, 0.3);
-    }
+    .service-card:hover  {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(124, 240, 61, 0.15);
+}
 
     @media (max-width: 600px) {
       .section-title {
@@ -113,6 +113,25 @@
         font-size: 1rem;
       }
     }
+     .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00ff88; /* Neon green */
+  color: #0f0f0f;       /* Dark text for readability */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.4); /* Neon glow */
+}
+
+.btn:hover {
+  background: #00cc6e; /* Slightly darker neon green */
+  transform: translateY(-2px);
+}
+
   </style>
 </head>
 <body>
@@ -123,43 +142,49 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">Who Am I?</a></li>
-      <li><a href="interport.html">Portfolio</a></li>
+      <li><a href="interport.html">Projects</a></li>
       <li><a href="service.html" class="active">Service</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <section class="services-section">
-    <div class="container">
-      <h1 class="section-title">My Services</h1>
-      <p class="section-subtitle">What I Can Do for You</p>
+    <!-- Inside each .service-card, I added 2 buttons: Hire Me and View Work -->
 
-      <div class="services-grid">
-        <div class="service-card">
-          <i class='bx bx-code-alt'></i>
-          <h3>Frontend Development</h3>
-          <p>Building responsive and engaging user interfaces using ReactJS, HTML, CSS, and JavaScript.</p>
-        </div>
+<div class="services-grid">
+  <div class="service-card">
+    <i class='bx bx-code-alt'></i>
+    <h3>Frontend Development</h3>
+    <p>Building responsive and engaging user interfaces using ReactJS, HTML, CSS, and JavaScript.</p>
+    <a href="contact.html" class="btn">Hire Me</a>
+    <a href="interport.html#frontend" class="btn">View Work</a>
+  </div>
 
-        <div class="service-card">
-          <i class='bx bx-brain'></i>
-          <h3>AI Integration</h3>
-          <p>Designing intelligent assistants and automations using Python, Machine Learning, and voice tech.</p>
-        </div>
+  <div class="service-card">
+    <i class='bx bx-brain'></i>
+    <h3>AI Integration</h3>
+    <p>Designing intelligent assistants and automations using Python, Machine Learning, and voice tech.</p>
+    <a href="contact.html" class="btn">Hire Me</a>
+    <a href="interport.html#ai" class="btn">View Work</a>
+  </div>
 
-        <div class="service-card">
-          <i class='bx bx-devices'></i>
-          <h3>Full Stack Projects</h3>
-          <p>Delivering full web solutions from frontend to backend, including APIs, auth, and database logic.</p>
-        </div>
+  <div class="service-card">
+    <i class='bx bx-devices'></i>
+    <h3>Full Stack Projects</h3>
+    <p>Delivering full web solutions from frontend to backend, including APIs, auth, and database logic.</p>
+    <a href="contact.html" class="btn">Hire Me</a>
+    <a href="interport.html#fullstack" class="btn">View Work</a>
+  </div>
 
-        <div class="service-card">
-          <i class='bx bx-customize'></i>
-          <h3>Custom Portfolio Websites</h3>
-          <p>Creating animated, dark-themed, and mobile-first portfolio websites tailored to your personality.</p>
-        </div>
-      </div>
-    </div>
+  <div class="service-card">
+    <i class='bx bx-customize'></i>
+    <h3>Custom Portfolio Websites</h3>
+    <p>Creating animated, dark-themed, and mobile-first portfolio websites tailored to your personality.</p>
+    <a href="contact.html" class="btn">Hire Me</a>
+    <a href="interport.html#portfolio" class="btn">View Work</a>
+  </div>
+</div>
+
   </section>
 </body>
 </html>
