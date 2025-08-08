@@ -1,4 +1,4 @@
-# Ragul's Developer Portfolio 💻
+screenshots/portfolioimage.png# Ragul's Developer Portfolio 💻
 
 A visually appealing and responsive portfolio website to showcase my projects, skills, and contact details.
 
@@ -16,8 +16,8 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 - GSAP / Framer Motion
 
 ## 🔗 Live Demo
-[My Portfolio Website]<img src="screenshots/portfolioimage.png
-" width="400"/>
+[My Portfolio Website]<img src="screenshots/portfolioimage.ng" width="400"/>
+
 
 
 ## 🧪 How to Run Locally
