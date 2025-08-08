@@ -16,7 +16,7 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 - GSAP / Framer Motion
 
 ## 🔗 Live Demo
-[My Portfolio Website]<img src="screenshots/placeholder.txt
+[My Portfolio Website]<img src="screenshots/portfolioimage.png
 " width="400"/>
 
 
