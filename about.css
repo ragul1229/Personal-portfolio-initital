@@ -8,8 +8,8 @@
 }
 
 body {
-  background-color: #1f2421;
-  color: #fff;
+  background-color: #0d1117; /* Deep charcoal-gray background */
+  color: #c9d1d9; /* Soft silver-gray text color */
 }
 
 /* Navbar */
@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 9%;
-  background-color: #1f2421;
+  background-color: #0d1117; /* Matching body background */
   position: fixed;
   top: 0;
   left: 0;
@@ -29,6 +29,7 @@ body {
 .navbar .logo {
   font-size: 30px;
   font-weight: 700;
+  color: white; /* Professional blue for the logo */
 }
 
 .navbar ul {
@@ -39,14 +40,14 @@ body {
 
 .navbar ul li a {
   font-size: 18px;
-  color: #fff;
+  color: #c9d1d9; /* Link color */
   text-decoration: none;
   transition: 0.3s;
 }
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-  color: #6bbf4e; /* Softer green */
+  color: #58a6ff; /* Blue hover and active color */
 }
 
 /* About Container */
@@ -54,31 +55,32 @@ body {
   max-width: 900px;
   margin: 120px auto 40px;
   padding: 40px;
-  background: rgba(30, 30, 30, 0.8);
+  background: #161b22; /* Slightly lighter shade of the background */
   border-radius: 16px;
-  box-shadow: 0 0 20px rgba(107, 191, 78, 0.2); /* Softer glow */
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.1); /* Subtle blue glow */
   animation: fadeIn 1.2s ease-in-out;
 }
 
 .about-container h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #6bbf4e;
+  color: #58a6ff; /* Professional blue for the heading */
 }
 
 .about-container p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 20px;
-  color: #ccc;
+  color: #8b949e; /* Slightly darker gray for the paragraph text */
 }
 
 .highlight {
-  color: #6bbf4e;
+  color: #58a6ff; /* Blue highlight color */
   font-weight: 600;
 }
 
 /* Animation */
+/* Kept fadeIn animation for a professional entry effect */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -90,23 +92,7 @@ body {
   }
 }
 
-/* Typing Animation */
-.typing {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #6bbf4e;
-  animation: typing 2.5s steps(30, end), blink 0.7s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
-}
+/* Removed typing animation for a cleaner, professional look */
 
 /* Info Section Blocks */
 .info-section {
@@ -121,6 +107,7 @@ body {
 .info-section:nth-child(4) { animation-delay: 0.9s; }
 .info-section:nth-child(5) { animation-delay: 1.2s; }
 
+/* Kept fadeUp animation for a professional staggered reveal */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -130,21 +117,21 @@ body {
 
 /* Cards for Projects & Tools */
 .card {
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: #161b22; /* Same as about-container for consistency */
   padding: 20px 25px;
-  border-left: 5px solid #6bbf4e;
+  border-left: 5px solid #58a6ff; /* Blue border */
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(107, 191, 78, 0.15);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1); /* Subtle blue shadow */
   transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(107, 191, 78, 0.25);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
 }
 
 .card h2 {
-  color: #6bbf4e;
+  color: #58a6ff; /* Blue card title */
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -155,5 +142,5 @@ body {
 
 .card ul li {
   margin-bottom: 8px;
-  color: #ccc;
+  color: #c9d1d9; /* List item color */
 }

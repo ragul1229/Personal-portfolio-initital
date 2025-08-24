@@ -1,190 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Services - Ragul J</title>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Services - Ragul J</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: #111;
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 9%;
+            background: #161b22;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
 
-    .navbar .logo {
-      color: #00ffee;
-      font-size: 24px;
-      font-weight: bold;
-    }
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-    .navbar ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+        .navbar ul li a {
+            color: #c9d1d9;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-    .navbar ul li a:hover,
-    .navbar ul li a.active {
-      color: #7cf03d;
-    }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #58a6ff;
+        }
 
-    .services-section {
-      padding: 80px 40px;
-      text-align: center;
-    }
+        .services-section {
+            padding: 120px 9% 60px;
+            text-align: center;
+        }
 
-    .section-title {
-      font-size: 3rem;
-      color: #ffffff;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px #00fff7;
-    }
+        .section-title {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
 
-    .section-subtitle {
-      font-size: 1.2rem;
-      color: #888;
-      margin-bottom: 50px;
-    }
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #8b949e;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-    }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-    .service-card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(0, 255, 247, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .service-card {
+            background: #161b22;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-    .service-card i {
-      font-size: 3rem;
-      color: #00fff7;
-      margin-bottom: 15px;
-    }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(88, 166, 255, 0.15);
+        }
 
-    .service-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
+        .service-card i {
+            font-size: 3.5rem;
+            color: #58a6ff;
+            margin-bottom: 20px;
+        }
 
-    .service-card p {
-      font-size: 1rem;
-      color: #bbb;
-    }
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
 
-    .service-card:hover  {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(124, 240, 61, 0.15);
-}
+        .service-card p {
+            font-size: 1rem;
+            color: #8b949e;
+            margin-bottom: 25px;
+        }
 
-    @media (max-width: 600px) {
-      .section-title {
-        font-size: 2.2rem;
-      }
-      .section-subtitle {
-        font-size: 1rem;
-      }
-    }
-     .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #00ff88; /* Neon green */
-  color: #0f0f0f;       /* Dark text for readability */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease, transform 0.3s ease;
-  margin-right: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.4); /* Neon glow */
-}
+        .service-card .btn-group {
+            margin-top: auto;
+        }
 
-.btn:hover {
-  background: #00cc6e; /* Slightly darker neon green */
-  transform: translateY(-2px);
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #58a6ff;
+            color: #0d1117;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
+        }
 
-  </style>
+        .btn-secondary {
+            background: transparent;
+            color: #58a6ff;
+            border: 2px solid #58a6ff;
+            margin-left: 10px;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #58a6ff;
+            color: #0d1117;
+            transform: translateY(-2px);
+        }
+
+        .btn:hover {
+            background: #4682b4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navbar Added -->
-  <nav class="navbar">
-    <a class="logo">Portfolio.</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Who Am I?</a></li>
-      <li><a href="interport.html">Projects</a></li>
-      <li><a href="service.html" class="active">Service</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <a class="logo">Portfolio.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who Am I?</a></li>
+            <li><a href="interport.html">Projects</a></li>
+            <li><a href="service.html" class="active">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  <section class="services-section">
-    <!-- Inside each .service-card, I added 2 buttons: Hire Me and View Work -->
+    <section class="services-section">
+        <h2 class="section-title">What I Do</h2>
+        <p class="section-subtitle">I build robust, scalable, and intuitive digital solutions. My expertise lies in creating seamless user experiences powered by modern technology.</p>
 
-<div class="services-grid">
-  <div class="service-card">
-    <i class='bx bx-code-alt'></i>
-    <h3>Frontend Development</h3>
-    <p>Building responsive and engaging user interfaces using ReactJS, HTML, CSS, and JavaScript.</p>
-    <a href="contact.html" class="btn">Hire Me</a>
-    <a href="interport.html#frontend" class="btn">View Work</a>
-  </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class='bx bx-code-alt'></i>
+                <h3>Front-End Development</h3>
+                <p>Crafting responsive and engaging user interfaces using **React**, **HTML**, **CSS**, and **JavaScript** to deliver exceptional user experiences.</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn">Get a Quote</a>
+                    <a href="interport.html#frontend" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
 
-  <div class="service-card">
-    <i class='bx bx-brain'></i>
-    <h3>AI Integration</h3>
-    <p>Designing intelligent assistants and automations using Python, Machine Learning, and voice tech.</p>
-    <a href="contact.html" class="btn">Hire Me</a>
-    <a href="interport.html#ai" class="btn">View Work</a>
-  </div>
+            <div class="service-card">
+                <i class='bx bx-brain'></i>
+                <h3>AI & Machine Learning</h3>
+                <p>Designing and implementing intelligent systems for data analysis, automation, and predictive modeling using **Python** and popular ML frameworks.</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn">Get a Quote</a>
+                    <a href="interport.html#ai" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
 
-  <div class="service-card">
-    <i class='bx bx-devices'></i>
-    <h3>Full Stack Projects</h3>
-    <p>Delivering full web solutions from frontend to backend, including APIs, auth, and database logic.</p>
-    <a href="contact.html" class="btn">Hire Me</a>
-    <a href="interport.html#fullstack" class="btn">View Work</a>
-  </div>
+            <div class="service-card">
+                <i class='bx bx-devices'></i>
+                <h3>Full-Stack Solutions</h3>
+                <p>Delivering end-to-end web applications by integrating **front-end** and **back-end** logic, including API development, database management, and authentication.</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn">Get a Quote</a>
+                    <a href="interport.html#fullstack" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
 
-  <div class="service-card">
-    <i class='bx bx-customize'></i>
-    <h3>Custom Portfolio Websites</h3>
-    <p>Creating animated, dark-themed, and mobile-first portfolio websites tailored to your personality.</p>
-    <a href="contact.html" class="btn">Hire Me</a>
-    <a href="interport.html#portfolio" class="btn">View Work</a>
-  </div>
-</div>
-
-  </section>
+            <div class="service-card">
+                <i class='bx bx-customize'></i>
+                <h3>Custom Web Design</h3>
+                <p>Creating unique, professional, and mobile-first websites that are tailored to personal branding and optimized for a seamless user experience across all devices.</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn">Get a Quote</a>
+                    <a href="interport.html#portfolio" class="btn btn-secondary">View Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -9,8 +9,8 @@
 
 body {
   margin: 0;
-  background-color: #1f2421;
-  color: #fff;
+  background-color: #0d1117; /* Deep charcoal-gray background */
+  color: #c9d1d9; /* Soft silver-gray text color */
 }
 
 /* Navbar */
@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 9%;
-  background-color: #1f2421;
+  background-color: #0d1117; /* Matching body background */
   position: fixed;
   width: 100%;
   top: 0;
@@ -27,7 +27,7 @@ body {
 }
 
 .navbar .logo {
-  color: #7cf03d;
+  color:white;/* Professional blue for the logo */
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar ul li a {
-  color: #fff;
+  color: #c9d1d9; /* Link color */
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s;
@@ -48,7 +48,7 @@ body {
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-  color: #7cf03d;
+  color: #58a6ff; /* Blue hover color */
 }
 
 /* Portfolio Section */
@@ -62,53 +62,53 @@ body {
 .portfolio-section h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #7cf03d;
+  color: #58a6ff; /* Professional blue for the heading */
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 80px; /* <-- THIS pushes the cards down */
+  margin-top: 80px;
   padding: 20px;
 }
 
 .project-card {
-  background: #2a2e35;
+  background: #161b22; /* A slightly lighter shade of the background for contrast */
   border-radius: 12px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(124, 240, 61, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.1); /* Subtle blue border */
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(124, 240, 61, 0.15);
+  box-shadow: 0 5px 10px rgba(88, 166, 255, 0.1); /* Reduced blue shadow on hover */
 }
 
 .project-card h3 {
   margin-bottom: 10px;
   font-size: 22px;
-  color: #fff;
+  color: #ffffff; /* White for project titles */
 }
 
 .project-card p {
   font-size: 16px;
   line-height: 1.5;
-  color: #ccc;
+  color: #8b949e; /* Slightly darker gray for project descriptions */
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 12px;
   text-decoration: none;
-  color: #7cf03d;
+  color: #58a6ff; /* Blue for the "Learn More" link */
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .project-card a:hover {
-  color: #a7ff6d;
+  color: #a3c7f7; /* Lighter blue on hover for the link */
 }
 
 /* Responsive Navbar */

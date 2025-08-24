@@ -1,131 +1,136 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background: #0d0d0d;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-    }
+body {
+  background: #0d1117; /* Deep charcoal-gray background */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: #c9d1d9; /* Soft silver-gray text */
+}
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: #111;
-    }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #161b22; /* A slightly lighter shade of the background */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
 
-    .navbar .logo {
-      color: #7cf03d;
-      font-size: 24px;
-      font-weight: bold;
-    }
+.navbar .logo {
+  color: white; /* Professional blue for the logo */
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    .navbar ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+.navbar ul li a {
+  color: #c9d1d9; /* Link color */
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .navbar ul li a:hover,
-    .navbar ul li a.active {
-      color: #7cf03d;
-    }
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #58a6ff; /* Blue hover color */
+}
 
-    .contact-container {
-      max-width: 600px;
-      margin: 80px auto;
-      padding: 40px;
-      background: rgba(30, 30, 30, 0.9);
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1s ease-in-out;
-    }
+.contact-container {
+  max-width: 600px;
+  margin: 120px auto 80px; /* Adjusted margin to accommodate fixed navbar */
+  padding: 40px;
+  background: #161b22; /* Consistent background with other sections */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.1); /* Subtle blue glow */
+  animation: fadeIn 1s ease-in-out;
+}
 
-    .contact-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #7cf03d;
-    }
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #58a6ff; /* Professional blue for the heading */
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+}
 
-    input, textarea {
-      margin-bottom: 20px;
-      padding: 12px;
-      background: #1f1f1f;
-      border: 2px solid transparent;
-      border-radius: 10px;
-      font-size: 16px;
-      color: #fff;
-      outline: none;
-      transition: 0.3s;
-    }
+input,
+textarea {
+  margin-bottom: 20px;
+  padding: 12px;
+  background: #0d1117; /* Dark background for input fields */
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #c9d1d9;
+  outline: none;
+  transition: 0.3s;
+}
 
-    input:focus, textarea:focus {
-      border-color: #00ffee;
-      box-shadow: 0 0 10px #00ffee66;
-    }
+input:focus,
+textarea:focus {
+  border-color: #58a6ff; /* Blue border on focus */
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.6); /* Blue glow on focus */
+}
 
-    textarea {
-      resize: vertical;
-    }
+textarea {
+  resize: vertical;
+}
 
-    button {
-      padding: 12px;
-      color: #7cf03d;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+button {
+  padding: 12px;
+  background: #58a6ff; /* Professional blue for the button */
+  color: #0d1117;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    button:hover {
-      color: #7cf03d;
-    }
+button:hover {
+  background: #4682b4; /* Darker blue on hover */
+}
 
-    #toast {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #00ffee;
-      color: #000;
-      padding: 15px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      display: none;
-      box-shadow: 0 0 10px #00ffee;
-    }
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #58a6ff;
+  color: #0d1117;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: none;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    @media (max-width: 768px) {
-      .contact-container {
-        margin: 40px 20px;
-        padding: 30px 20px;
-      }
-    }
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+}
