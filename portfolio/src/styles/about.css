@@ -1,0 +1,131 @@
+/* About Container */
+.about-container {
+  max-width: 1400px; /* wider content */
+  width: 95%; /* take most of the screen */
+  margin: 120px auto 40px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left = 1, right = 2 ratio */
+  gap: 40px;
+  background: #0d1117; /* blend with page */
+}
+
+/* Left Column (Profile + Quick Info) */
+.profile-sidebar {
+  background: #161b22;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-sidebar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #58a6ff;
+  box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+}
+
+.profile-sidebar h2 {
+  font-size: 22px;
+  color: #58a6ff;
+  margin-bottom: 10px;
+}
+
+.profile-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #c9d1d9;
+}
+
+.profile-sidebar ul li {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Right Column (Main content) */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Info Sections */
+.info-section {
+  background: #161b22;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+}
+
+.info-section h2 {
+  color: #58a6ff;
+  margin-bottom: 12px;
+}
+.about-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left Sidebar */
+.profile-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background: #111;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: fixed;
+  top: 60px; /* keeps below navbar */
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.profile-sidebar img.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+}
+
+/* Right content */
+.content-wrapper {
+  margin-left: 280px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+/* Reduce the right-side images */
+/* Card container */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;         /* space between image and text */
+  padding: 1.5rem;
+  background: #111827; /* or your dark background */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+/* Card image */
+.card-img {
+  width: 180px;        /* smaller image */
+  height: auto;
+  border-radius: 12px;
+  flex-shrink: 0;      /* prevent shrinking */
+}
+
+/* Card text */
+.card div {
+  flex: 1;             /* text takes remaining space */
+}

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Services - Ragul J</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         * {
             margin: 0;
@@ -161,66 +153,3 @@
                 margin-bottom: 30px;
             }
         }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <a class="logo">Portfolio.</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Who Am I?</a></li>
-            <li><a href="interport.html">Projects</a></li>
-            <li><a href="service.html" class="active">Service</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section class="services-section">
-        <h2 class="section-title">What I Do</h2>
-        <p class="section-subtitle">I build robust, scalable, and intuitive digital solutions. My expertise lies in creating seamless user experiences powered by modern technology.</p>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <i class='bx bx-code-alt'></i>
-                <h3>Front-End Development</h3>
-                <p>Crafting responsive and engaging user interfaces using **React**, **HTML**, **CSS**, and **JavaScript** to deliver exceptional user experiences.</p>
-                <div class="btn-group">
-                    <a href="contact.html" class="btn">Get a Quote</a>
-                    <a href="interport.html#frontend" class="btn btn-secondary">View Work</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <i class='bx bx-brain'></i>
-                <h3>AI & Machine Learning</h3>
-                <p>Designing and implementing intelligent systems for data analysis, automation, and predictive modeling using **Python** and popular ML frameworks.</p>
-                <div class="btn-group">
-                    <a href="contact.html" class="btn">Get a Quote</a>
-                    <a href="interport.html#ai" class="btn btn-secondary">View Work</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <i class='bx bx-devices'></i>
-                <h3>Full-Stack Solutions</h3>
-                <p>Delivering end-to-end web applications by integrating **front-end** and **back-end** logic, including API development, database management, and authentication.</p>
-                <div class="btn-group">
-                    <a href="contact.html" class="btn">Get a Quote</a>
-                    <a href="interport.html#fullstack" class="btn btn-secondary">View Work</a>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <i class='bx bx-customize'></i>
-                <h3>Custom Web Design</h3>
-                <p>Creating unique, professional, and mobile-first websites that are tailored to personal branding and optimized for a seamless user experience across all devices.</p>
-                <div class="btn-group">
-                    <a href="contact.html" class="btn">Get a Quote</a>
-                    <a href="interport.html#portfolio" class="btn btn-secondary">View Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html>

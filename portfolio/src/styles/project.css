@@ -74,11 +74,15 @@ body {
 }
 
 .project-card {
-  background: #161b22; /* A slightly lighter shade of the background for contrast */
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 280px;
   border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(88, 166, 255, 0.1); /* Subtle blue border */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* content at bottom */
+  border: 1px solid rgba(88, 166, 255, 0.1);
 }
 
 .project-card:hover {
@@ -86,12 +90,11 @@ body {
   box-shadow: 0 5px 10px rgba(88, 166, 255, 0.1); /* Reduced blue shadow on hover */
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #ffffff; /* White for project titles */
+.project-content h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
 }
-
 .project-card p {
   font-size: 16px;
   line-height: 1.5;
@@ -106,7 +109,32 @@ body {
   font-weight: bold;
   transition: color 0.3s;
 }
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+}
+.project-content {
+  position: relative;
+  padding: 20px;
+  color: white;
+  z-index: 2;
+  text-align: left;
+}
+.project-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #c9d1d9;
+}
 
+.project-content a {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #58a6ff;
+  font-weight: bold;
+}
 .project-card a:hover {
   color: #a3c7f7; /* Lighter blue on hover for the link */
 }
