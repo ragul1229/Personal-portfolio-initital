@@ -8,6 +8,7 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 - Contact form with email integration
 
 ## 🛠️ Tech Stack
+- REACT
 - HTML
 - CSS
 - JavaScript
