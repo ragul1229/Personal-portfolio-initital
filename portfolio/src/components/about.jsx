@@ -23,6 +23,12 @@ const About = () => {
             </Link>
           </li>
           <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/service">Service</Link>
+          </li>
+          <li>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
@@ -106,9 +112,7 @@ const About = () => {
                 </li>
                 <li>
                   Developed an{" "}
-                  <span className="highlight">
-                    ML-powered outpass system
-                  </span>{" "}
+                  <span className="highlight">ML-powered outpass system</span>{" "}
                   that streamlines and secures college administration.
                 </li>
               </ul>

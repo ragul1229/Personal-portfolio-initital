@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 /* Updated body background and text color for a sleek, professional look */
 body {
   background-color: #0d1117; /* A deep, professional charcoal-gray/black */
-  color: #c9d1d9; /* A soft silver-gray for text */
+  color: #c9d1d9;
+  padding-top: 90px; /* A soft silver-gray for text */
 }
 
 /* Navbar */
@@ -165,7 +166,7 @@ a {
 }
 
 .home-img::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -233,5 +234,123 @@ a {
   }
   100% {
     opacity: 0.05;
+  }
+}
+
+/* ========== RESPONSIVENESS ========== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 5% 40px; /* more padding-top for navbar */
+    height: auto; /* allow natural height */
+    gap: 40px;
+  }
+
+  .home-info h1 {
+    font-size: 42px;
+  }
+
+  .home-info h2 {
+    font-size: 24px;
+  }
+
+  .home-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .img-box {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .home {
+    padding: 90px 5% 30px; /* enough space below navbar */
+    gap: 30px;
+  }
+
+  .home-info h1 {
+    font-size: 32px;
+  }
+
+  .home-info h2 {
+    font-size: 20px;
+  }
+
+  .home-info p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .sci a {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .home-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .img-box {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .navbar .logo {
+    font-size: 22px;
+  }
+
+  .navbar ul li {
+    margin-left: 15px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  .home {
+    padding: 80px 5% 20px;
+    gap: 25px;
+  }
+
+  .home-info h1 {
+    font-size: 26px;
+  }
+
+  .home-info h2 {
+    font-size: 18px;
+  }
+
+  .home-info p {
+    font-size: 13px;
+  }
+
+  .home-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .img-box {
+    width: 160px;
+    height: 160px;
   }
 }
