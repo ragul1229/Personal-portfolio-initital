@@ -8,13 +8,14 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 - Contact form with email integration
 
 ## 🛠️ Tech Stack
+- REACT
 - HTML
 - CSS
 - JavaScript
 - Three.js
 - GSAP / Framer Motion
 
-## 🔗 Live Demo
+## 📸 Screenshots
 <img src="screenshots/portfolioimage.png" width="400"/>
 
 
@@ -22,8 +23,8 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 1. Clone this repository
 2. Open `index.html` in browser
 
-## 📸 Screenshots
-> 
+
+
 
 ## 📄 License
 MIT
