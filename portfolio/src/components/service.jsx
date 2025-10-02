@@ -9,20 +9,31 @@ function Service() {
       <nav className="navbar">
         <a className="logo">Portfolio.</a>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">Who Am I?</Link></li>
-          <li><Link to="/interport">Projects</Link></li>
-          <li><Link to="/service" className="active">Service</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">Who Am I?</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/service" className="active">
+              Service
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
 
       {/* Services Section */}
       <section className="services-section">
-        <h2 className="section-title">What I Do</h2>
+        <h2 className="section-title">Freelancing Services I Offer</h2>
         <p className="section-subtitle">
-          I build robust, scalable, and intuitive digital solutions. My expertise lies in
-          creating seamless user experiences powered by modern technology.
+          I help businesses and individuals grow online with high-quality web solutions, from responsive websites to e-commerce platforms and bug fixes.
         </p>
 
         <div className="services-grid">
@@ -31,56 +42,83 @@ function Service() {
             <i className="bx bx-code-alt"></i>
             <h3>Front-End Development</h3>
             <p>
-              Crafting responsive and engaging user interfaces using React, HTML, CSS,
-              and JavaScript to deliver exceptional user experiences.
+              Building responsive and engaging user interfaces using React, HTML, CSS, and JavaScript to create seamless user experiences.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">Get a Quote</Link>
-              <Link to="/interport#frontend" className="btn btn-secondary">View Work</Link>
+              <Link to="/contact" className="btn">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
             </div>
           </div>
 
-          {/* AI & Machine Learning */}
+          {/* WordPress Development */}
           <div className="service-card">
-            <i className="bx bx-brain"></i>
-            <h3>AI & Machine Learning</h3>
+            <i className="bx bx-wordpress"></i>
+            <h3>WordPress Development</h3>
             <p>
-              Designing and implementing intelligent systems for data analysis,
-              automation, and predictive modeling using Python and popular ML frameworks.
+              Creating professional WordPress websites, custom themes, plugin integration, and WooCommerce stores tailored to your business needs.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">Get a Quote</Link>
-              <Link to="/interport#ai" className="btn btn-secondary">View Work</Link>
+              <Link to="/contact" className="btn">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
             </div>
           </div>
 
-          {/* Full-Stack Solutions */}
+          {/* Bug Fixing & Optimization */}
           <div className="service-card">
-            <i className="bx bx-devices"></i>
-            <h3>Full-Stack Solutions</h3>
+            <i className="bx bx-bug"></i>
+            <h3>Bug Fixing & Optimization</h3>
             <p>
-              Delivering end-to-end web applications by integrating front-end and
-              back-end logic, including API development, database management, and
-              authentication.
+              Fixing website issues, improving performance, responsiveness, and ensuring smooth functionality for all devices and browsers.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">Get a Quote</Link>
-              <Link to="/interport#fullstack" className="btn btn-secondary">View Work</Link>
+              <Link to="/contact" className="btn">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
             </div>
           </div>
 
-          {/* Custom Web Design */}
+          {/* E-Commerce Development */}
           <div className="service-card">
-            <i className="bx bx-customize"></i>
-            <h3>Custom Web Design</h3>
+            <i className="bx bx-cart-alt"></i>
+            <h3>E-Commerce Development</h3>
             <p>
-              Creating unique, professional, and mobile-first websites that are tailored
-              to personal branding and optimized for a seamless user experience across
-              all devices.
+              Developing fully functional online stores with WordPress/WooCommerce or custom React/Node solutions, including payment gateway integration.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">Get a Quote</Link>
-              <Link to="/interport#portfolio" className="btn btn-secondary">View Work</Link>
+              <Link to="/contact" className="btn">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
+            </div>
+          </div>
+
+          {/* Portfolio / Personal Websites */}
+          <div className="service-card">
+            <i className="bx bx-briefcase-alt-2"></i>
+            <h3>Portfolio / Personal Websites</h3>
+            <p>
+              Designing and developing professional personal or portfolio websites that highlight your work and help you get noticed by clients.
+            </p>
+            <div className="btn-group">
+              <Link to="/contact" className="btn">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
             </div>
           </div>
         </div>

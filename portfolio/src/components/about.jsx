@@ -6,6 +6,8 @@ import "../styles/about.css";
 import profileImg from "../assets/ragul.jpg";
 import aiProjectImg from "../assets/ai-project.jpg";
 import skillsImg from "../assets/skills.jpg";
+import elcodamicsImg from "../assets/elcodamics.jpg"; // Add an image for your internship/company
+
 
 const About = () => {
   return (
@@ -91,6 +93,33 @@ const About = () => {
               <strong>Large Language Models (LLMs)</strong>, craft APIs, and
               design user-focused interfaces to solve real-world problems.
             </p>
+          </section>
+
+          {/* Professional Experience Section */}
+          <section className="info-section card fade-in">
+            <img
+              src={elcodamicsImg}
+              alt="Elcodamics Internship"
+              className="card-img small-img"
+            />
+            <div>
+              <h2>Professional Experience</h2>
+              <ul>
+                <li>
+                  Currently interning at <strong>Elcodamics</strong>, contributing to AI & web development projects.
+                </li>
+                <li>
+                  Developing features for full-stack applications using{" "}
+                  <strong>React.js, Node.js, PHP and MongoDB</strong>.
+                </li>
+                <li>
+                  Integrating AI-powered solutions into practical tools, including automation and optimization modules.
+                </li>
+                <li>
+                  Collaborating with senior developers to enhance system architecture and code efficiency.
+                </li>
+              </ul>
+            </div>
           </section>
 
           {/* Projects Section */}
