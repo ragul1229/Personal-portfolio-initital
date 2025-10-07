@@ -1,51 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/service.css"; // your css file
+import "../styles/service.css";
+import Navbar from "./Navbar";
+
+// Icons: We'll assume Boxicons (bx) or similar library is linked in index.html,
+// or we can use generic placeholders. Sticking with the existing 'bx' classes.
 
 function Service() {
   return (
-    <>
-      {/* Navbar */}
-      <nav className="navbar">
-        <a className="logo">Portfolio.</a>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">Who Am I?</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/service" className="active">
-              Service
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className="service-page-wrapper">
+      <Navbar />
 
-      {/* Services Section */}
       <section className="services-section">
-        <h2 className="section-title">Freelancing Services I Offer</h2>
-        <p className="section-subtitle">
-          I help businesses and individuals grow online with high-quality web solutions, from responsive websites to e-commerce platforms and bug fixes.
-        </p>
+        
+        {/* Header Section */}
+        <div className="services-header">
+          <h2 className="section-title">
+            Freelancing Services I Offer<span className="accent-dot">.</span>
+          </h2>
+          <p className="section-subtitle">
+            I help businesses and individuals grow online with modern, intelligent
+            solutions, from high-performance web applications to cutting-edge AI integration.
+          </p>
+        </div>
 
+        {/* Services Grid */}
         <div className="services-grid">
-          {/* Front-End Development */}
+          
+          {/* Card 1: Full-Stack Development */}
           <div className="service-card">
-            <i className="bx bx-code-alt"></i>
-            <h3>Front-End Development</h3>
+            <i className="bx bx-code-alt card-icon"></i>
+            <h3>Full-Stack Development</h3>
             <p>
-              Building responsive and engaging user interfaces using React, HTML, CSS, and JavaScript to create seamless user experiences.
+              Building robust, scalable applications using the MERN stack (MongoDB, Express, React, Node.js). Seamlessly integrate front-end design with powerful back-end logic.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">
+              <Link to="/contact" className="btn btn-primary">
                 Get a Quote
               </Link>
               <Link to="/projects" className="btn btn-secondary">
@@ -54,15 +44,15 @@ function Service() {
             </div>
           </div>
 
-          {/* WordPress Development */}
+          {/* Card 2: AI/ML Integration & Generative AI */}
           <div className="service-card">
-            <i className="bx bx-wordpress"></i>
-            <h3>WordPress Development</h3>
+            <i className="bx bx-atom card-icon"></i>
+            <h3>AI/ML Integration</h3>
             <p>
-              Creating professional WordPress websites, custom themes, plugin integration, and WooCommerce stores tailored to your business needs.
+              Integrating Large Language Models (LLMs) and custom Machine Learning solutions into your existing products to automate tasks, analyze data, and create smarter user experiences.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">
+              <Link to="/contact" className="btn btn-primary">
                 Get a Quote
               </Link>
               <Link to="/projects" className="btn btn-secondary">
@@ -71,15 +61,15 @@ function Service() {
             </div>
           </div>
 
-          {/* Bug Fixing & Optimization */}
+          {/* Card 3: Bug Fixing & Optimization */}
           <div className="service-card">
-            <i className="bx bx-bug"></i>
+            <i className="bx bx-bug card-icon"></i>
             <h3>Bug Fixing & Optimization</h3>
             <p>
-              Fixing website issues, improving performance, responsiveness, and ensuring smooth functionality for all devices and browsers.
+              Diagnosing complex issues, improving website performance, speed, and responsiveness, and ensuring flawless functionality across all modern devices and browsers.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">
+              <Link to="/contact" className="btn btn-primary">
                 Get a Quote
               </Link>
               <Link to="/projects" className="btn btn-secondary">
@@ -88,15 +78,15 @@ function Service() {
             </div>
           </div>
 
-          {/* E-Commerce Development */}
+          {/* Card 4: E-Commerce Development */}
           <div className="service-card">
-            <i className="bx bx-cart-alt"></i>
+            <i className="bx bx-cart-alt card-icon"></i>
             <h3>E-Commerce Development</h3>
             <p>
-              Developing fully functional online stores with WordPress/WooCommerce or custom React/Node solutions, including payment gateway integration.
+              Developing secure, scalable online stores using custom MERN solutions or platforms like WooCommerce, complete with inventory management and payment integration.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">
+              <Link to="/contact" className="btn btn-primary">
                 Get a Quote
               </Link>
               <Link to="/projects" className="btn btn-secondary">
@@ -105,15 +95,15 @@ function Service() {
             </div>
           </div>
 
-          {/* Portfolio / Personal Websites */}
+          {/* Card 5: Portfolio / Personal Websites */}
           <div className="service-card">
-            <i className="bx bx-briefcase-alt-2"></i>
-            <h3>Portfolio / Personal Websites</h3>
+            <i className="bx bx-briefcase-alt-2 card-icon"></i>
+            <h3>Portfolio / Personal Sites</h3>
             <p>
-              Designing and developing professional personal or portfolio websites that highlight your work and help you get noticed by clients.
+              Designing and developing professional personal or portfolio websites that effectively showcase your projects and attract clients and employers.
             </p>
             <div className="btn-group">
-              <Link to="/contact" className="btn">
+              <Link to="/contact" className="btn btn-primary">
                 Get a Quote
               </Link>
               <Link to="/projects" className="btn btn-secondary">
@@ -121,9 +111,27 @@ function Service() {
               </Link>
             </div>
           </div>
+          
+          {/* Card 6: CMS/WordPress Development (Optional but good to keep) */}
+          <div className="service-card">
+            <i className="bx bx-wordpress card-icon"></i>
+            <h3>CMS & WordPress Solutions</h3>
+            <p>
+              Custom WordPress theme development, setup, plugin integration, and maintenance for simple content management and blogging platforms.
+            </p>
+            <div className="btn-group">
+              <Link to="/contact" className="btn btn-primary">
+                Get a Quote
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
+                View Work
+              </Link>
+            </div>
+          </div>
+
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

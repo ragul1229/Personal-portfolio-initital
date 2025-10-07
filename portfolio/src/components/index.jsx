@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ragulImg from "../assets/ragul.jpg";
 import "../styles/index.css";
+import Navbar from "./Navbar";
 // Make sure to add this import for the social media icons
 
 const Home = () => {
@@ -18,26 +19,7 @@ const Home = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="navbar">
-        <span className="logo">Portfolio</span>
-        <ul>
-          <li className="active">
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">Who Am I?</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/service">Service</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+         <Navbar />  {/* ✅ use the Navbar component */}
 
       {/* Home Section */}
       <section className="home">
