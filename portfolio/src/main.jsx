@@ -9,8 +9,8 @@ const basename = "/Personal-portfolio-initital";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename={basename}>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
+    <BrowserRouter ={basename}>
+    <App />
+  </BrowserRouter>
+  </StrictMode >
 );
