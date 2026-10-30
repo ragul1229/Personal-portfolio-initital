@@ -37,8 +37,8 @@ const Home = () => {
           <div className="btn-sci">
             {/* Download CV button */}
             <a
-              href="/ragul-resume-main.pdf" // Use this relative path after placing the PDF in the public folder
-              download="ragul-resume-main"
+              href={`${import.meta.env.BASE_URL}Ragul_UIUX_Resume.pdf`}
+              download="Ragul_UIUX_Resume.pdf"
               className="btn"
             >
               Download CV
