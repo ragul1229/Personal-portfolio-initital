@@ -13,6 +13,7 @@ import {
   Divider,
 } from "@mui/material";
 import { Email, LocationOn, Phone, LinkedIn, GitHub, Send } from "@mui/icons-material";
+import Navbar from "./Navbar";
 
 const Contact = () => {
   const [toastVisible, setToastVisible] = useState(false);
@@ -64,10 +65,10 @@ const Contact = () => {
         fontFamily: "'Poppins', sans-serif",
         color: darkText,
         pb: 8,
-        // Adjusted padding to create space where the Navbar would normally be
-        pt: { xs: 4, md: 8 } 
+        pt: { xs: 3, md: 5 },
       }}
     >
+      <Navbar />
       {/* Container for content centered on page */}
       <Box sx={{ maxWidth: 1200, mx: "auto", px: { xs: 2, md: 4 } }}>
         
@@ -87,13 +88,13 @@ const Contact = () => {
         </Typography>
 
         {/* Main Content Grid with Styling and Animations */}
-        <Grid container spacing={6}>
+        <Grid container spacing={{ xs: 3, md: 6 }}>
           {/* Contact Form Card */}
           <Grid item xs={12} md={7}>
             <Card 
                 // Enhanced Card Styling and Shadow
                 sx={{ 
-                    p: 4, 
+                    p: { xs: 2.5, sm: 4 },
                     borderRadius: 3, 
                     backgroundColor: cardBg,
                     boxShadow: "0 10px 30px rgba(0,0,0,0.1)", // Prominent Shadow

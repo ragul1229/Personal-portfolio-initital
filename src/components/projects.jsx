@@ -3,140 +3,89 @@ import Navbar from "./Navbar";
 
 const projectsData = [
   {
-    title: "🧠 SourceProof",
-    category: "AI Engineer",
-    desc: "An evidence-grounded AI research agent that answers research questions using evidence retrieved from uploaded documents.",
+    title: "🧪 Flaky Test Detector & Explainer",
+    category: "AI & Software Testing",
+    desc: "An AI-powered testing tool that identifies unreliable test cases by analyzing repeated test executions and inconsistent pass/fail results. Provides failure insights and possible explanations to improve software testing reliability.",
     tags: [
       "Python",
       "FastAPI",
       "LLM API",
-      "Embeddings",
-      "BM25",
-      "Qdrant/pgvector",
+      "Streamlit",
+      "SQLite",
+      "Automated Testing",
     ],
     codeLink: "",
     demoLink: "",
   },
   {
-    title: "🧩 RepoMind",
-    category: "AI Engineer",
-    desc: "An AI-powered codebase understanding and debugging agent that indexes source files and retrieves relevant code for debugging questions.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "LLM API",
-      "Code Parsing",
-      "Embeddings",
-      "Git",
-    ],
-    codeLink: "",
-    demoLink: "",
-  },
-  {
-    title: "⚙️ FlowForge",
-    category: "Full Stack Developer",
-    desc: "A visual workflow automation platform that allows users to create automated processes using interconnected nodes.",
-    tags: [
-      "React",
-      "TypeScript",
-      "React Flow",
-      "Java",
-      "Spring Boot",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-    ],
-    codeLink: "",
-    demoLink: "",
-  },
-  {
-    title: "💰 FinSight",
-    category: "Full Stack Developer",
-    desc: "A personal finance analytics platform for managing transactions, monitoring budgets, and analyzing spending patterns.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Spring Boot/Node.js",
-      "PostgreSQL",
-      "Charting Library",
-    ],
-    codeLink: "",
-    demoLink: "",
-  },
-  {
-    title: "📡 OpenSignal",
+    title: "🏛️ Smart Grievance Redressal and Monitoring System",
     category: "MERN Stack Developer",
-    desc: "A real-time infrastructure incident platform for reporting and monitoring infrastructure incidents using an interactive map.",
+    desc: "A MERN-based web application that enables citizens to submit and track public grievances. Provides department-wise complaint assignment, status monitoring, and centralized administration to improve transparency and accountability.",
     tags: [
       "MongoDB",
       "Express.js",
       "React.js",
       "Node.js",
-      "Socket.IO",
-      "Leaflet",
+      "JWT Auth",
+      "Role-Based Access",
     ],
     codeLink: "",
     demoLink: "",
   },
   {
-    title: "🎓 SkillBridge",
-    category: "MERN Stack Developer",
-    desc: "A collaborative learning and mentorship platform connecting learners with mentors through skill-based discovery.",
+    title: "🎓 EduMentor – AI-Powered Study Assistant",
+    category: "AI & Full Stack Developer",
+    desc: "An AI-powered learning platform that allows students to upload study materials, generate summaries, and create quizzes. Helps simplify learning through automated content analysis and interactive assessments.",
     tags: [
-      "MongoDB",
-      "Express.js",
+      "Python",
+      "React.js",
+      "LLM API",
+      "Document Parsing",
+      "REST APIs",
+    ],
+    codeLink: "",
+    demoLink: "",
+  },
+  {
+    title: "🎟️ Eventure – Event Management Platform",
+    category: "Full Stack Developer",
+    desc: "A full-stack event management application with Admin, Organizer, and User roles. Supports event creation, management, approval, and user registration through a centralized platform.",
+    tags: [
       "React.js",
       "Node.js",
-      "Socket.IO",
-      "JWT",
+      "Express.js",
+      "MongoDB",
+      "RBAC",
+      "REST APIs",
     ],
     codeLink: "",
     demoLink: "",
   },
   {
-    title: "🛡️ Sentinel",
-    category: "Spring Boot Developer",
-    desc: "An intelligent API security and reliability platform for managing authentication, request limits, and service reliability.",
+    title: "📧 ReachInbox Scheduler",
+    category: "Full Stack & Automation",
+    desc: "An email scheduling application designed to organize and automate email delivery by allowing users to schedule messages for specific dates and times.",
     tags: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "JUnit",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Task Scheduling",
+      "Email Automation",
     ],
     codeLink: "",
     demoLink: "",
   },
   {
-    title: "📦 Smart Inventory and Order Management System",
-    category: "Spring Boot Developer",
-    desc: "An inventory and order management application to track products, stock levels, and order status.",
+    title: "⚽ Play-Buddy – Sports Team Finder",
+    category: "Full Stack Web Developer",
+    desc: "A web application that helps users discover nearby sports teams and connect with players to organize games and sports activities.",
     tags: [
-      "Java",
-      "Spring Boot",
-      "Spring Data JPA",
-      "PostgreSQL",
-      "Redis",
-      "Spring Security",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Location Discovery",
+      "Responsive UI",
     ],
-    codeLink: "",
-    demoLink: "",
-  },
-  {
-    title: "♿ AccessAble",
-    category: "UI/UX Designer",
-    desc: "An accessibility-first digital experience design that helps teams identify and prioritize usability barriers.",
-    tags: ["Figma", "FigJam", "axe DevTools", "WCAG Guidance"],
-    codeLink: "",
-    demoLink: "",
-  },
-  {
-    title: "🩺 MediFlow",
-    category: "UI/UX Designer",
-    desc: "A patient-centered appointment booking experience designed for discovering healthcare providers and managing visits.",
-    tags: ["Figma", "FigJam", "Interactive Prototyping"],
     codeLink: "",
     demoLink: "",
   },
@@ -158,7 +107,7 @@ const styles = {
     minHeight: "100vh",
   },
   contentWrapper: {
-    padding: "120px 5% 60px",
+    padding: "40px 5% 60px",
     maxWidth: "1200px",
     margin: "0 auto",
   },
@@ -264,7 +213,7 @@ const Projects = () => {
           </h2>
 
           <p style={styles.subtitle}>
-            Explore my AI, full-stack, MERN, Spring Boot, and UI/UX projects.
+            Explore my AI, full-stack, MERN, and web automation projects.
           </p>
 
           <div style={styles.grid}>
@@ -311,9 +260,7 @@ const Projects = () => {
                           style={styles.link}
                           aria-label={`View demo for ${project.title}`}
                         >
-                          {project.category === "UI/UX Designer"
-                            ? "View Prototype"
-                            : "Live Demo"}
+                          Live Demo
                         </a>
                       )}
                     </div>

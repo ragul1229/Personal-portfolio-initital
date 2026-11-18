@@ -26,13 +26,9 @@ const Home = () => {
         <div className="home-info">
           <h1>Ragul</h1>
           <h2>I'm a FullStack Developer</h2>
-          <p>
-            Hi, I'm <strong>Ragul J</strong>, an enthusiastic and dedicated
-            third-year Artificial Intelligence Engineering student with a
-            passion for building intelligent systems and creative web interfaces.
-            I enjoy working on real-world projects, from AI-powered assistants
-            to YouTube clone frontends, blending logic with design.
-          </p>
+         <p>
+  Hi, I'm <strong>Ragul J</strong>, an aspiring <strong>AI & Full-Stack Developer</strong> passionate about building intelligent, scalable, and user-friendly applications. I enjoy transforming ideas into practical solutions by combining my skills in <strong>Python, Artificial Intelligence, and Web Development</strong>. I love exploring emerging technologies, solving real-world problems, and creating innovative digital experiences through hands-on projects.
+</p>
 
           <div className="btn-sci">
             {/* Download CV button */}

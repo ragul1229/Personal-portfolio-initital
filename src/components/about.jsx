@@ -20,6 +20,9 @@ import {
   Phone,
   ArrowForward,
   Download,
+  Code,
+  Storage,
+  Psychology,
 } from "@mui/icons-material";
 
 import profileImg from "../assets/ragul.jpg";
@@ -44,109 +47,119 @@ const cardStyles = {
 
 const skillGroups = [
   {
-    title: "Design Tools",
-    skills: ["Figma", "FigJam"],
+    title: "Programming Languages",
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "PHP", "SQL"],
   },
   {
-    title: "UX Research",
+    title: "Frontend Development",
     skills: [
-      "User Interviews",
-      "Surveys",
-      "User Personas",
-      "Competitive Analysis",
-    ],
-  },
-  {
-    title: "Information Architecture",
-    skills: ["User Flows", "Site Maps", "Navigation Design"],
-  },
-  {
-    title: "Interaction Design",
-    skills: ["Wireframing", "Prototyping", "Interaction States"],
-  },
-  {
-    title: "UI Design",
-    skills: [
-      "Layout",
-      "Typography",
-      "Color Theory",
-      "Visual Hierarchy",
+      "React.js",
+      "HTML5",
+      "CSS3",
+      "Material-UI (MUI)",
+      "Tailwind CSS",
       "Responsive Design",
     ],
   },
   {
-    title: "Design Systems",
+    title: "Backend & APIs",
     skills: [
-      "Components",
-      "Variants",
-      "Reusable Patterns",
-      "Design Tokens",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Spring Boot",
+      "RESTful APIs",
+      "JWT Authentication",
     ],
   },
   {
-    title: "Usability",
+    title: "Databases & Storage",
+    skills: ["MongoDB", "SQLite", "MySQL", "Query Optimization"],
+  },
+  {
+    title: "AI & Data Science",
     skills: [
-      "Usability Testing",
-      "Task Analysis",
-      "User Feedback",
-      "Iterative Design",
+      "Data Analysis",
+      "Python Data Stack",
+      "Prompt Engineering",
+      "LLM Integration",
+      "Automated Classification",
     ],
   },
   {
-    title: "Accessibility",
+    title: "Testing & Reliability",
     skills: [
-      "WCAG Principles",
-      "Keyboard Navigation",
-      "Color Contrast",
-      "Accessible Forms",
+      "Flaky Test Detection",
+      "Automated Testing",
+      "PyTest",
+      "JUnit",
+      "Debugging & Profiling",
     ],
   },
   {
-    title: "Documentation",
+    title: "Tools & DevOps",
     skills: [
-      "Design Specifications",
-      "UX Case Studies",
-      "Handoff Documentation",
+      "Git",
+      "GitHub",
+      "Apache Maven",
+      "Agile Sprints",
+      "VS Code",
+      "Postman",
     ],
   },
 ];
 
 const internshipHighlights = [
-  "Built React.js front-end interfaces from requirements, working with senior developers and QA in Agile sprints.",
+  "Built React.js front-end interfaces from requirements, working closely with senior developers and QA in Agile sprints.",
   "Implemented form input validation and structured error handling to improve interface reliability and user experience.",
-  "Developed responsive, mobile-friendly interfaces using React.js, HTML5, and CSS3.",
-  "Translated requirements into reusable React.js components with clear visual hierarchy and consistent styling.",
-  "Collaborated with developers and QA to identify and resolve UI defects and usability issues.",
-  "Incorporated feedback from sprint planning and review sessions to refine interfaces iteratively.",
+  "Developed robust PHP-based REST APIs, JWT authentication, and role-based access control workflows.",
+  "Translated technical specifications into reusable React.js components with clean visual hierarchy and consistent styling.",
+  "Collaborated with developers and QA to identify, debug, and resolve UI defects and performance bottlenecks.",
 ];
 
 const projects = [
   {
-    title: "AccessAble",
-    subtitle: "Accessibility-First Digital Experience Platform",
+    title: "Flaky Test Detector",
+    subtitle: "AI-Automated Test Reliability & Analysis System",
     description:
-      "Designed an accessibility-focused interface to help teams identify and prioritize usability barriers.",
-    tags: ["Figma", "FigJam", "axe DevTools", "WCAG Guidance"],
+      "Developed an automated Flaky Test Detection system to identify inconsistent software test cases that produce different results across repeated executions without any code changes. The system analyzes test execution history, identifies intermittent failures, and highlights potentially flaky tests to improve software testing reliability.",
+    tags: ["Python", "FastAPI", "Streamlit", "SQLite", "AI / LLMs"],
     highlights: [
-      "Created user flows, wireframes, and interactive prototypes for accessibility issue management.",
-      "Designed reusable components with clear focus states, accessible form patterns, and responsive layouts.",
-      "Developed before-and-after interface comparisons to demonstrate proposed accessibility improvements.",
-      "Conducted usability testing to identify navigation, form-validation, and information-clarity issues.",
-      "Documented design decisions, accessibility considerations, and evaluation findings.",
+      "Engineered backend analysis pipelines in Python and FastAPI to parse and evaluate test execution metrics.",
+      "Integrated SQLite for reliable local execution logging and historical trend tracking.",
+      "Built an interactive Streamlit dashboard to visualize intermittent failures and unstable test patterns.",
+      "Leveraged AI-driven insights to assist developers in isolating root causes of test flakiness.",
     ],
   },
   {
-    title: "MediFlow",
-    subtitle: "Patient Appointment Experience Redesign",
+    title: "Software Dependency Risk Platform",
+    subtitle: "Enterprise Java Dependency Intelligence Tool",
     description:
-      "Designed a patient-centered appointment booking experience for discovering healthcare providers and managing visits.",
-    tags: ["Figma", "FigJam", "Interactive Prototyping"],
+      "Designed and built a Java-based platform that parses Maven POM files, constructs dependency graphs, detects version conflicts, and executes automated verification test suites.",
+    tags: [
+      "Java",
+      "Apache Maven",
+      "Graph Data Structures",
+      "Automated Testing",
+    ],
     highlights: [
-      "Developed user journeys, information architecture, and task flows for appointment discovery and booking.",
-      "Created responsive wireframes and high-fidelity prototypes for desktop and mobile experiences.",
-      "Designed form-validation, error-prevention, confirmation, and rescheduling interactions.",
-      "Conducted usability tests to identify friction points in appointment booking.",
-      "Iterated on the interface using user feedback and documented the resulting design decisions.",
+      "Parsed complex Maven POM files to extract transitive dependency trees and version metadata.",
+      "Constructed dependency graphs to pinpoint version conflicts and security vulnerabilities.",
+      "Automated upgrade intelligence recommendations and compatibility verification checks.",
+      "Triggered automated test suites to validate build stability prior to dependency upgrades.",
+    ],
+  },
+  {
+    title: "Smart Public Grievance Redressal System",
+    subtitle: "MERN Stack Citizen Service & Monitoring Portal",
+    description:
+      "Designed a full-stack MERN application incorporating microservice-style API separation, role-based access dashboards, and automated AI-driven complaint classification.",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    highlights: [
+      "Implemented microservice-inspired modular backend architecture with secure JWT authentication.",
+      "Built role-based dashboards for citizens, departmental staff, and administrative oversight.",
+      "Integrated automated classification logic to route complaints to appropriate municipal departments.",
+      "Created fully responsive and accessible user interfaces for real-time grievance tracking.",
     ],
   },
 ];
@@ -154,7 +167,7 @@ const projects = [
 const certifications = [
   {
     provider: "freeCodeCamp",
-    title: "JavaScript Algorithms & DSA",
+    title: "JavaScript Algorithms & Data Structures",
   },
   {
     provider: "freeCodeCamp",
@@ -252,19 +265,14 @@ const ContactItem = ({ icon: Icon, label, href, external = false }) => (
         bgcolor: colors.softPurple,
       }}
     >
-      <Icon
-        aria-hidden="true"
-        sx={{ color: colors.accent, fontSize: 19 }}
-      />
+      <Icon aria-hidden="true" sx={{ color: colors.accent, fontSize: 19 }} />
     </Box>
 
     {href ? (
       <Box
         component="a"
         href={href}
-        {...(external
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : {})}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         sx={{
           color: colors.primary,
           textDecoration: "none",
@@ -315,7 +323,7 @@ const About = () => {
         component="main"
         maxWidth="lg"
         sx={{
-          pt: { xs: "110px", md: "130px" },
+          pt: { xs: 4, md: 6 },
           pb: { xs: 6, md: 10 },
         }}
       >
@@ -329,8 +337,7 @@ const About = () => {
             mb: 6,
             position: "relative",
             overflow: "hidden",
-            background:
-              "linear-gradient(135deg, #FFFFFF 0%, #F1EFFF 100%)",
+            background: "linear-gradient(135deg, #FFFFFF 0%, #F1EFFF 100%)",
           }}
         >
           <Box
@@ -400,7 +407,7 @@ const About = () => {
                   mb: 2,
                 }}
               >
-                UI/UX Designer | Product Designer | UX Designer
+                AI & Data Science Student | Full-Stack & AI Systems Developer
               </Typography>
 
               <Typography
@@ -411,12 +418,11 @@ const About = () => {
                   fontSize: "0.98rem",
                 }}
               >
-                I design clear, accessible digital experiences through user
-                research, thoughtful interaction design, and iterative
-                prototyping. My front-end development experience helps me
-                connect design decisions with implementation, from responsive
-                layouts and reusable components to form validation and
-                developer handoff.
+                I build intelligent, full-stack software applications and
+                AI-driven testing tools. Combining my background in Artificial
+                Intelligence & Data Science with hands-on full-stack development
+                experience, I design scalable backend architectures, automated
+                testing suites, and clean, responsive user interfaces.
               </Typography>
 
               <Stack
@@ -430,9 +436,9 @@ const About = () => {
                 }}
               >
                 {[
-                  "User-Centered Design",
-                  "Accessible Interfaces",
-                  "Interactive Prototyping",
+                  "Full-Stack Development",
+                  "AI Automation",
+                  "Software Reliability",
                 ].map((label) => (
                   <Chip
                     key={label}
@@ -478,8 +484,8 @@ const About = () => {
 
                 <Button
                   component="a"
-                  href={`${import.meta.env.BASE_URL}Ragul_UIUX_Resume.pdf`}
-                  download="Ragul_UIUX_Resume.pdf"
+                  href={`${import.meta.env.BASE_URL}Ragul_Resume.pdf`}
+                  download="Ragul_Resume.pdf"
                   variant="outlined"
                   startIcon={<Download />}
                   sx={{
@@ -611,7 +617,7 @@ const About = () => {
                   gap={1}
                   sx={{ mt: 3 }}
                 >
-                  {["React.js", "HTML5", "CSS3", "Responsive UI", "Agile"].map(
+                  {["React.js", "PHP", "REST APIs", "JWT Auth", "Agile"].map(
                     (skill) => (
                       <Chip
                         key={skill}
@@ -623,7 +629,7 @@ const About = () => {
                           color: colors.secondary,
                         }}
                       />
-                    )
+                    ),
                   )}
                 </Stack>
               </Card>
@@ -632,7 +638,7 @@ const About = () => {
             <Box component="section" aria-labelledby="projects-heading">
               <SectionTitle
                 id="projects-heading"
-                eyebrow="Selected design work"
+                eyebrow="Featured engineering work"
               >
                 Featured Projects
               </SectionTitle>
@@ -786,8 +792,8 @@ const About = () => {
                     mt: 1,
                   }}
                 >
-                  SB Matriculation Higher Secondary School, Musiri,
-                  Trichy, Tamil Nadu
+                  SB Matriculation Higher Secondary School, Musiri, Trichy,
+                  Tamil Nadu
                 </Typography>
 
                 <Chip
@@ -804,7 +810,7 @@ const About = () => {
             </Box>
           </Stack>
 
-          {/* Contact, skills, certifications */}
+          {/* Contact, technical skills, certifications */}
           <Stack spacing={4} sx={{ minWidth: 0 }}>
             <Card
               component="section"
@@ -869,7 +875,7 @@ const About = () => {
                   mb: 3,
                 }}
               >
-                Design Skills
+                Technical Skills
               </Typography>
 
               <Stack spacing={2.5}>
@@ -887,12 +893,7 @@ const About = () => {
                       {group.title}
                     </Typography>
 
-                    <Stack
-                      direction="row"
-                      useFlexGap
-                      flexWrap="wrap"
-                      gap={0.8}
-                    >
+                    <Stack direction="row" useFlexGap flexWrap="wrap" gap={0.8}>
                       {group.skills.map((skill) => (
                         <Chip
                           key={skill}
@@ -914,9 +915,7 @@ const About = () => {
                     </Stack>
 
                     {index < skillGroups.length - 1 && (
-                      <Divider
-                        sx={{ mt: 2.5, borderColor: colors.border }}
-                      />
+                      <Divider sx={{ mt: 2.5, borderColor: colors.border }} />
                     )}
                   </Box>
                 ))}
@@ -1010,8 +1009,8 @@ const About = () => {
                   lineHeight: 1.8,
                 }}
               >
-                Published in the International Journal of Research
-                Publication and Reviews (IJRPR), Volume 6, Issue 5, 2025.
+                Published in the International Journal of Research Publication
+                and Reviews (IJRPR), Volume 6, Issue 5, 2025.
               </Typography>
             </Card>
           </Stack>
@@ -1039,7 +1038,7 @@ const About = () => {
               mb: 1.5,
             }}
           >
-            Thoughtful design. Clearer experiences.
+            Scalable systems. Intelligent applications.
           </Typography>
 
           <Typography
@@ -1051,8 +1050,8 @@ const About = () => {
               lineHeight: 1.8,
             }}
           >
-            Let’s connect about UI/UX design, product experiences, and
-            interfaces that put people first.
+            Let’s connect about full-stack engineering, AI automation, and
+            building robust software solutions.
           </Typography>
 
           <Button

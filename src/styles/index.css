@@ -11,65 +11,12 @@
 body {
   background-color: #0d1117; /* A deep, professional charcoal-gray/black */
   color: #c9d1d9;
-  padding-top: 90px; /* A soft silver-gray for text */
+  padding-top: var(--site-header-height);
 }
 
-/* Navbar */
 a {
   color: #c9d1d9; /* Text color for links */
   text-decoration: none;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 25px 9%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  background-color: #0d1117; /* Matching the body background */
-
-  opacity: 0;
-  visibility: hidden;
-  animation: show-content 0.5s ease-in forwards;
-  animation-delay: 0.2s;
-}
-
-@keyframes show-content {
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.navbar .logo {
-  font-size: 30px;
-  font-weight: 700;
-  color: #ffffff; /* Pure white for the logo to stand out */
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar ul li {
-  list-style: none;
-  margin-left: 35px;
-}
-
-.navbar ul li a {
-  font-size: 20px;
-  font-weight: 500;
-  transition: 0.5s;
-}
-
-/* Updated hover and active link color to a subtle, professional blue */
-.navbar ul li:hover a,
-.navbar ul li.active a {
-  color: #58a6ff;
 }
 
 /* Home Section */
@@ -77,8 +24,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
-  padding: 60px 9% 0;
+  min-height: calc(100vh - var(--site-header-height));
+  min-height: calc(100svh - var(--site-header-height));
+  padding: 30px 9%;
   gap: 60px;
   position: relative;
 }
@@ -106,6 +54,7 @@ a {
   align-items: center;
   margin-top: 30px;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* Download CV Button */
@@ -244,9 +193,12 @@ a {
   .home {
     flex-direction: column;
     text-align: center;
-    padding: 100px 5% 40px; /* more padding-top for navbar */
-    height: auto; /* allow natural height */
+    padding: 30px 5% 40px;
     gap: 40px;
+  }
+
+  .btn-sci {
+    justify-content: center;
   }
 
   .home-info h1 {
@@ -271,7 +223,7 @@ a {
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
   .home {
-    padding: 90px 5% 30px; /* enough space below navbar */
+    padding: 24px 5% 30px;
     gap: 30px;
   }
 
@@ -311,24 +263,8 @@ a {
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 15px 5%;
-  }
-
-  .navbar .logo {
-    font-size: 22px;
-  }
-
-  .navbar ul li {
-    margin-left: 15px;
-  }
-
-  .navbar ul li a {
-    font-size: 14px;
-  }
-
   .home {
-    padding: 80px 5% 20px;
+    padding: 20px 5% 24px;
     gap: 25px;
   }
 
