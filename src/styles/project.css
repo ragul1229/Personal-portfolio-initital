@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #0d1117; /* Deep charcoal-gray background */
+  color: #c9d1d9; /* Soft silver-gray text color */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 9%;
+  background-color: #0d1117; /* Matching body background */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .logo {
+  color:white;/* Professional blue for the logo */
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.navbar ul li a {
+  color: #c9d1d9; /* Link color */
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #58a6ff; /* Blue hover color */
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 100px 9% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #58a6ff; /* Professional blue for the heading */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.project-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* content at bottom */
+  border: 1px solid rgba(88, 166, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px rgba(88, 166, 255, 0.1); /* Reduced blue shadow on hover */
+}
+
+.project-content h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #8b949e; /* Slightly darker gray for project descriptions */
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #58a6ff; /* Blue for the "Learn More" link */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+}
+.project-content {
+  position: relative;
+  padding: 20px;
+  color: white;
+  z-index: 2;
+  text-align: left;
+}
+.project-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #c9d1d9;
+}
+
+.project-content a {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #58a6ff;
+  font-weight: bold;
+}
+.project-card a:hover {
+  color: #a3c7f7; /* Lighter blue on hover for the link */
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-section {
+    padding-top: 120px;
+  }
+}
