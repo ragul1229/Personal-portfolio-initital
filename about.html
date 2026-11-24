@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Ragul J</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar .logo {
+      color: #00ffee;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #00ffee;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(30, 30, 30, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .about-container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00ffee;
+    }
+
+    .about-container p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #00ffee;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Updated Navbar -->
+<nav class="navbar">
+  <a class="logo">Portfolio.</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">Who Am I?</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- About Content -->
+  <div class="about-container">
+    <h1>About Me</h1>
+    <p>Hello! I'm <span class="highlight">Ragul J</span>, a passionate and curious <span class="highlight">third-year engineering student</span> specializing in <span class="highlight">Artificial Intelligence</span>. I'm fascinated by how technology can solve real-world problems and improve lives.</p>
+    <p>Currently, I'm working on exciting projects like building a smart <span class="highlight">AI voice assistant (Jarvis-like)</span> and a secure <span class="highlight">college outpass system</span> with ML-based tracking of hostel movements. My project work spans across Python, Machine Learning, and Full-Stack Development.</p>
+    <p>I actively explore new tools and technologies. I'm also diving deep into <span class="highlight">MongoDB</span>, <span class="highlight">React.js</span>, and <span class="highlight">Web 3D animations</span> using libraries like <span class="highlight">Three.js</span> and <span class="highlight">Framer Motion</span>.</p>
+    <p>I'm always open to collaborations, internships, and freelance opportunities. If you're building something cool, feel free to <a href="contact.html" style="color: #00ffee; text-decoration: underline;">reach out</a>!</p>
+  </div>
+
+</body>
+</html>

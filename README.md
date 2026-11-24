@@ -23,7 +23,7 @@ A visually appealing and responsive portfolio website to showcase my projects, s
 
 ## 🛠️ Tech Stack
 - REACT
-- HTML
+- HTMLgit add README.md
 - CSS
 - JavaScript
 - Three.js

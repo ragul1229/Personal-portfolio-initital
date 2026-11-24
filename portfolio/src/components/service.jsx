@@ -1,138 +1,83 @@
-import React from "react";
+import { createElement } from "react";
+import { ArrowRight, Atom, Bug, BriefcaseBusiness, Code2, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
-import "../styles/service.css";
 import Navbar from "./Navbar";
+import Reveal from "./Reveal";
 
-// Icons: We'll assume Boxicons (bx) or similar library is linked in index.html,
-// or we can use generic placeholders. Sticking with the existing 'bx' classes.
+const services = [
+  {
+    icon: Code2,
+    title: "Full-Stack Development",
+    description:
+      "Building robust, scalable applications using the MERN stack, React, Node.js, and Spring Boot—connecting polished front-end interfaces with back-end logic.",
+  },
+  {
+    icon: Atom,
+    title: "AI & GenAI Integration",
+    description:
+      "Integrating Large Language Models, custom AI workflows, and automation tools into products to streamline tasks, analyze data, and elevate user experiences.",
+  },
+  {
+    icon: Bug,
+    title: "Bug Fixing & Optimization",
+    description:
+      "Diagnosing code issues, debugging API bottlenecks, improving page responsiveness, and strengthening test coverage and application reliability.",
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-Commerce & Web Apps",
+    description:
+      "Developing secure online stores and custom web platforms with product catalogs, shopping carts, authentication, and payment integrations.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Portfolio & Landing Pages",
+    description:
+      "Designing and developing professional portfolios and landing pages to showcase projects, build a personal brand, and connect with employers or clients.",
+  },
+];
 
-function Service() {
-  return (
-    <div className="service-page-wrapper">
-      <Navbar />
-
-      <section className="services-section">
-        
-        {/* Header Section */}
-        <div className="services-header">
-          <h2 className="section-title">
-            Freelancing Services I Offer<span className="accent-dot">.</span>
-          </h2>
-          <p className="section-subtitle">
-            I help businesses and individuals grow online with modern, intelligent
-            solutions, from high-performance web applications to cutting-edge AI integration.
+const Service = () => (
+  <>
+    <Navbar />
+    <main className="page-content">
+      <header className="page-header">
+        <Reveal>
+          <p className="eyebrow">Ways I can help</p>
+          <h1 className="page-title">
+            Digital products, thoughtfully <span className="gradient-text">engineered.</span>
+          </h1>
+          <p className="page-intro">
+            I help businesses and individuals build scalable web applications,
+            intelligent AI-driven solutions, and high-performance digital
+            platforms.
           </p>
-        </div>
+        </Reveal>
+      </header>
 
-        {/* Services Grid */}
-        <div className="services-grid">
-          
-          {/* Card 1: Full-Stack Development */}
-          <div className="service-card">
-            <i className="bx bx-code-alt card-icon"></i>
-            <h3>Full-Stack Development</h3>
-            <p>
-              Building robust, scalable applications using the MERN stack (MongoDB, Express, React, Node.js). Seamlessly integrate front-end design with powerful back-end logic.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
+      <section className="service-grid" aria-label="Development services">
+        {services.map(({ icon, title, description }, index) => (
+          <Reveal className="service-card" key={title} delay={(index % 2) * 0.08}>
+            <span className="service-icon">{createElement(icon, { size: 20 })}</span>
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <div className="service-actions">
+              <Link className="button button-primary button-small" to="/contact">
+                Discuss a project <ArrowRight size={14} />
               </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
+              <Link className="button button-secondary button-small" to="/projects">
+                See work
               </Link>
             </div>
-          </div>
-
-          {/* Card 2: AI/ML Integration & Generative AI */}
-          <div className="service-card">
-            <i className="bx bx-atom card-icon"></i>
-            <h3>AI/ML Integration</h3>
-            <p>
-              Integrating Large Language Models (LLMs) and custom Machine Learning solutions into your existing products to automate tasks, analyze data, and create smarter user experiences.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
-              </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 3: Bug Fixing & Optimization */}
-          <div className="service-card">
-            <i className="bx bx-bug card-icon"></i>
-            <h3>Bug Fixing & Optimization</h3>
-            <p>
-              Diagnosing complex issues, improving website performance, speed, and responsiveness, and ensuring flawless functionality across all modern devices and browsers.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
-              </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 4: E-Commerce Development */}
-          <div className="service-card">
-            <i className="bx bx-cart-alt card-icon"></i>
-            <h3>E-Commerce Development</h3>
-            <p>
-              Developing secure, scalable online stores using custom MERN solutions or platforms like WooCommerce, complete with inventory management and payment integration.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
-              </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 5: Portfolio / Personal Websites */}
-          <div className="service-card">
-            <i className="bx bx-briefcase-alt-2 card-icon"></i>
-            <h3>Portfolio / Personal Sites</h3>
-            <p>
-              Designing and developing professional personal or portfolio websites that effectively showcase your projects and attract clients and employers.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
-              </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
-              </Link>
-            </div>
-          </div>
-          
-          {/* Card 6: CMS/WordPress Development (Optional but good to keep) */}
-          <div className="service-card">
-            <i className="bx bx-wordpress card-icon"></i>
-            <h3>CMS & WordPress Solutions</h3>
-            <p>
-              Custom WordPress theme development, setup, plugin integration, and maintenance for simple content management and blogging platforms.
-            </p>
-            <div className="btn-group">
-              <Link to="/contact" className="btn btn-primary">
-                Get a Quote
-              </Link>
-              <Link to="/projects" className="btn btn-secondary">
-                View Work
-              </Link>
-            </div>
-          </div>
-
-        </div>
+          </Reveal>
+        ))}
       </section>
-    </div>
-  );
-}
+    </main>
+    <footer className="site-footer">
+      <span>RAGUL J · SERVICES</span>
+      <Link to="/contact">Get in touch <ArrowRight size={13} /></Link>
+    </footer>
+  </>
+);
 
 export default Service;
