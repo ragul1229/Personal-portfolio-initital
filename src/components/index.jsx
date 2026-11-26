@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ragulImg from "../assets/ragul.jpg";
+import ragulImg from "../assets/ragul.jpeg";
 import "../styles/index.css";
 import Navbar from "./Navbar";
 // Make sure to add this import for the social media icons

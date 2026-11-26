@@ -25,7 +25,7 @@ import {
   Psychology,
 } from "@mui/icons-material";
 
-import profileImg from "../assets/ragul.jpg";
+import profileImg from "../assets/ragul.jpeg";
 import elcodamicsImg from "../assets/elcodamics.jpg";
 
 const colors = {
