@@ -43,7 +43,7 @@ const Contact = () => {
       } else {
         alert("Oops! Something went wrong.");
       }
-    } catch (err) {
+    } catch {
       alert("Error submitting form.");
     }
   };
